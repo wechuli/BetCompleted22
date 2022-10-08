@@ -74,15 +74,20 @@ public class Apustua implements Serializable{
 	}
 	
 	public boolean galdutaMarkatu(Quote quo) {
-		if(kuota.getQuestion().getQuestionNumber()==quo.getQuestion().getQuestionNumber() && quo.getQuoteNumber()!=kuota.getQuoteNumber()) {
+		if(kuota.getQuestion().getQuestionNumber().equals(quo.getQuestion().getQuestionNumber())&&!quo.getQuoteNumber().equals(kuota.getQuoteNumber())) {
 			this.egoera="galduta";
 			return true;
 		}
 		return false;
 	}
-	//kuota.getQuestion().getQuestionNumber().equlas(quo.getQuestion().getQuestionNumber()) && kuota.getQuestion().getQuestionNumber().equlas(quo.getQuoteNumber()!=kuota.getQuoteNumber())
 	public void eguneratuApustuKant(Sport s) {
 		s.eguneratuApustuKantitatea();
+	}
+	
+	@Override
+	public int hashCode() {
+		return apustuaNumber;
+		
 	}
 	
 	@Override
