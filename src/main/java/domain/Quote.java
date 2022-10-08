@@ -105,7 +105,12 @@ public class Quote implements Serializable{
 			i++; 
 		}
 	}
-	
+	@Override
+	public int hashCode() {
+		return quoteNumber;
+		
+	}
+	//aldatua
 	@Override
 	public boolean equals(Object o) {
 		if(o==null) {

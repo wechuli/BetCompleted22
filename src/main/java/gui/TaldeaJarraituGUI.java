@@ -26,6 +26,7 @@ public class TaldeaJarraituGUI extends JFrame{
 	private BLFacade businessLogic = MainGUI.getBusinessLogic();
 
 	private static final long serialVersionUID = 1L;
+	private static final String Tahoma="Tahoma";
 	private User user;
 
 	private JLabel lblAukeratu;
@@ -48,11 +49,11 @@ public class TaldeaJarraituGUI extends JFrame{
 		this.setTitle(ResourceBundle.getBundle("Etiquetas").getString("Seguir"));
 		
 		btnSeguir = new JButton(ResourceBundle.getBundle("Etiquetas").getString("Seguir")); //$NON-NLS-1$ //$NON-NLS-2$
-		btnSeguir.setFont(new Font("Tahoma", Font.PLAIN, 16));
+		btnSeguir.setFont(new Font(Tahoma, Font.PLAIN, 16));
 
 		lblAukeratu = new JLabel(ResourceBundle.getBundle("Etiquetas").getString("AukTeam") + ":");
 		lblAukeratu.setOpaque(true);
-		lblAukeratu.setFont(new Font("Tahoma", Font.BOLD, 20));
+		lblAukeratu.setFont(new Font(Tahoma, Font.BOLD, 20));
 		lblAukeratu.setBackground(Color.PINK);
 		lblAukeratu.setHorizontalAlignment(SwingConstants.CENTER);
 		lblAukeratu.setBounds(20, 21, 588, 47);
@@ -80,7 +81,7 @@ public class TaldeaJarraituGUI extends JFrame{
 		list.setCellRenderer(new TeamRenderer());
 		
 		btnClose = new JButton(ResourceBundle.getBundle("Etiquetas").getString("Close")); //$NON-NLS-1$ //$NON-NLS-2$
-		btnClose.setFont(new Font("Tahoma", Font.PLAIN, 15));
+		btnClose.setFont(new Font(Tahoma, Font.PLAIN, 15));
 		btnClose.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				jButtonClose_actionPerformed(e);

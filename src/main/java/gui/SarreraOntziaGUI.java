@@ -139,7 +139,7 @@ public class SarreraOntziaGUI extends JFrame implements ListCellRenderer{
 	private void jButtonClose_actionPerformed(ActionEvent e) {
 		this.setVisible(false);
 	}
-
+ 
 	@Override
 	public Component getListCellRendererComponent(JList list, Object value, int index, boolean isSelected,
 			boolean cellHasFocus) {

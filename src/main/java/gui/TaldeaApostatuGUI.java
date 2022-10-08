@@ -19,7 +19,7 @@ import businessLogic.BLFacade;
 import domain.Event;
 import domain.Question;
 import domain.Quote;
-import domain.Registered;
+//import domain.Registered;
 import domain.User;
 import javax.swing.JButton;
 import java.awt.event.ActionListener;

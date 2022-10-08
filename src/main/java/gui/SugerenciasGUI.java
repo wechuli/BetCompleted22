@@ -122,7 +122,7 @@ public class SugerenciasGUI extends JFrame{
 		btnApostar.setForeground(Color.DARK_GRAY);
 		list = new JList();
 		list.setFont(new Font("Tahoma", Font.PLAIN, 18));
-		list.addListSelectionListener(new ListSelectionListener() {
+		list.addListSelectionListener(new ListSelectionListener() { 
 			public void valueChanged(ListSelectionEvent e) {
 				btnApostar.setEnabled(false);
 				questionLista.removeAllElements();

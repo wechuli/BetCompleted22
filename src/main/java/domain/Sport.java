@@ -87,7 +87,7 @@ public class Sport implements Serializable{
 		return apustuKantitatea;
 		
 	}
-	
+	//f
 	@Override
 	public boolean equals(Object o) {
 		if(o==null) {

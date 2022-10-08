@@ -1,6 +1,7 @@
 package domain;
 
 import java.io.Serializable;
+import java.util.ArrayList;
 import java.util.Vector;
 
 import javax.persistence.CascadeType;
@@ -19,7 +20,7 @@ public class Team implements Serializable{
 	@Id 
 	private String izena;
 	@OneToMany(fetch=FetchType.EAGER, cascade=CascadeType.ALL)
-	private Vector<Registered> users =new Vector<Registered>();
+	private ArrayList<Registered> users =new ArrayList<Registered>();
 	@OneToMany(fetch=FetchType.EAGER, cascade=CascadeType.ALL)
 	private Vector<Event> events =new Vector<Event>();
 	
@@ -39,11 +40,11 @@ public class Team implements Serializable{
 		this.izena = izena;
 	}
 
-	public Vector<Registered> getUsers() {
+	public ArrayList<Registered> getUsers() {
 		return users;
 	}
 
-	public void setUsers(Vector<Registered> users) {
+	public void setUsers(ArrayList<Registered> users) {
 		this.users = users;
 	}
 

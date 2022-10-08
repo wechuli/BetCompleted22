@@ -49,7 +49,7 @@ public class DataAccess  {
 	protected static EntityManagerFactory emf;
 
 
-	ConfigXML c=ConfigXML.getInstance();
+	static ConfigXML c=ConfigXML.getInstance();
 
      public DataAccess(boolean initializeMode)  {
 		
@@ -828,7 +828,7 @@ public class DataAccess  {
 	}
 	
 
-public void open(boolean initializeMode){
+public static void open(boolean initializeMode){
 		
 		System.out.println("Opening DataAccess instance => isDatabaseLocal: "+c.isDatabaseLocal()+" getDatabBaseOpenMode: "+c.getDataBaseOpenMode());
 

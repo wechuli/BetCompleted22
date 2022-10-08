@@ -34,7 +34,7 @@ public class AdminGUI extends JFrame {
 	private JPanel jContentPane = null;
 	private JButton jButtonCreateQuery = null;
 	private JButton jButtonQueryQueries = null;
-
+	private static final String ETIK ="Etiquetas";
     private static BLFacade appFacadeInterface;
 	
 	public static BLFacade getBusinessLogic(){
@@ -90,7 +90,8 @@ public class AdminGUI extends JFrame {
 		// this.setSize(271, 295);
 		this.setSize(495, 300);
 		this.setContentPane(getJContentPane());
-		this.setTitle(ResourceBundle.getBundle("Etiquetas").getString("AdminTitle"));
+		
+		this.setTitle(ResourceBundle.getBundle(ETIK).getString("AdminTitle"));
 	}
 
 	/**
@@ -110,7 +111,7 @@ public class AdminGUI extends JFrame {
 			jContentPane.add(getBtnNewButton_1());
 			jContentPane.add(getJButtonEmaitzaIpini());
 			
-			JButton jButtonGertaerakEzabatu = new JButton(ResourceBundle.getBundle("Etiquetas").getString("GertaerakEzabatu")); //$NON-NLS-1$ //$NON-NLS-2$
+			JButton jButtonGertaerakEzabatu = new JButton(ResourceBundle.getBundle(ETIK).getString("GertaerakEzabatu")); //$NON-NLS-1$ //$NON-NLS-2$
 			jButtonGertaerakEzabatu.setForeground(Color.DARK_GRAY);
 			jButtonGertaerakEzabatu.setBackground(Color.PINK);
 			jButtonGertaerakEzabatu.addActionListener(new ActionListener() {
@@ -140,7 +141,7 @@ public class AdminGUI extends JFrame {
 			jButtonCreateQuery.setForeground(Color.DARK_GRAY);
 			jButtonCreateQuery.setBackground(Color.PINK);
 			jButtonCreateQuery.setBounds(10, 84, 213, 30);
-			jButtonCreateQuery.setText(ResourceBundle.getBundle("Etiquetas").getString("CreateQuery"));
+			jButtonCreateQuery.setText(ResourceBundle.getBundle(ETIK).getString("CreateQuery"));
 			jButtonCreateQuery.addActionListener(new java.awt.event.ActionListener() {
 				public void actionPerformed(java.awt.event.ActionEvent e) {
 					JFrame a = new CreateQuestionGUI(new Vector<Event>());
@@ -162,7 +163,7 @@ public class AdminGUI extends JFrame {
 			jButtonQueryQueries.setForeground(Color.DARK_GRAY);
 			jButtonQueryQueries.setBackground(Color.PINK);
 			jButtonQueryQueries.setBounds(10, 44, 213, 30);
-			jButtonQueryQueries.setText(ResourceBundle.getBundle("Etiquetas").getString("QueryQueries"));
+			jButtonQueryQueries.setText(ResourceBundle.getBundle(ETIK).getString("QueryQueries"));
 			jButtonQueryQueries.addActionListener(new java.awt.event.ActionListener() {
 				public void actionPerformed(java.awt.event.ActionEvent e) {
 					JFrame a = new FindQuestionsGUI();
@@ -177,7 +178,7 @@ public class AdminGUI extends JFrame {
 
 	private JLabel getLblNewLabel() {
 		if (jLabelSelectOption == null) {
-			jLabelSelectOption = new JLabel(ResourceBundle.getBundle("Etiquetas").getString("SelectOption"));
+			jLabelSelectOption = new JLabel(ResourceBundle.getBundle(ETIK).getString("SelectOption"));
 			jLabelSelectOption.setOpaque(true);
 			jLabelSelectOption.setBackground(Color.PINK);
 			jLabelSelectOption.setBounds(110, 10, 249, 20);
@@ -190,7 +191,7 @@ public class AdminGUI extends JFrame {
 	
 	private JButton getBtnNewButton() {
 		if (btnNewButton == null) {
-			btnNewButton = new JButton(ResourceBundle.getBundle("Etiquetas").getString("KuotakIpini")); //$NON-NLS-1$ //$NON-NLS-2$
+			btnNewButton = new JButton(ResourceBundle.getBundle(ETIK).getString("KuotakIpini")); //$NON-NLS-1$ //$NON-NLS-2$
 			btnNewButton.setBackground(Color.PINK);
 			btnNewButton.setForeground(Color.DARK_GRAY);
 			btnNewButton.setBounds(239, 44, 232, 30);
@@ -205,7 +206,7 @@ public class AdminGUI extends JFrame {
 	}
 	private JButton getBtnNewButton_1() {
 		if (btnNewButton_1 == null) {
-			btnNewButton_1 = new JButton(ResourceBundle.getBundle("Etiquetas").getString("GertaerakSortu")); //$NON-NLS-1$ //$NON-NLS-2$
+			btnNewButton_1 = new JButton(ResourceBundle.getBundle(ETIK).getString("GertaerakSortu")); //$NON-NLS-1$ //$NON-NLS-2$
 			btnNewButton_1.setBackground(Color.PINK);
 			btnNewButton_1.setForeground(Color.DARK_GRAY);
 			btnNewButton_1.setBounds(239, 84, 232, 30);
@@ -220,7 +221,7 @@ public class AdminGUI extends JFrame {
 	}
 	private JButton getJButtonEmaitzaIpini() {
 		if (jButtonEmaitzaIpini == null) {
-			jButtonEmaitzaIpini = new JButton(ResourceBundle.getBundle("Etiquetas").getString("EmaitzaIpini"));
+			jButtonEmaitzaIpini = new JButton(ResourceBundle.getBundle(ETIK).getString("EmaitzaIpini"));
 			jButtonEmaitzaIpini.setForeground(Color.DARK_GRAY);
 			jButtonEmaitzaIpini.setBackground(Color.PINK);
 			jButtonEmaitzaIpini.addActionListener(new ActionListener() {
@@ -237,7 +238,7 @@ public class AdminGUI extends JFrame {
 	
 	private JButton getJButtonDesLogin() {
 		if (jButtonDesLogin == null) {
-			jButtonDesLogin = new JButton(ResourceBundle.getBundle("Etiquetas").getString("DesLogin")); //$NON-NLS-1$ //$NON-NLS-2$
+			jButtonDesLogin = new JButton(ResourceBundle.getBundle(ETIK).getString("DesLogin")); //$NON-NLS-1$ //$NON-NLS-2$
 			jButtonDesLogin.setForeground(Color.WHITE);
 			jButtonDesLogin.setBackground(Color.DARK_GRAY);
 			jButtonDesLogin.addActionListener(new ActionListener() {
@@ -253,7 +254,7 @@ public class AdminGUI extends JFrame {
 	}
 	private JButton getBtnNewButton_2() {
 		if (btnNewButton_2 == null) {
-			btnNewButton_2 = new JButton(ResourceBundle.getBundle("Etiquetas").getString("Mezuak")); //$NON-NLS-1$ //$NON-NLS-2$
+			btnNewButton_2 = new JButton(ResourceBundle.getBundle(ETIK).getString("Mezuak")); //$NON-NLS-1$ //$NON-NLS-2$
 			btnNewButton_2.setBackground(Color.PINK);
 			btnNewButton_2.setForeground(Color.DARK_GRAY);
 			btnNewButton_2.addActionListener(new ActionListener() {
@@ -268,7 +269,7 @@ public class AdminGUI extends JFrame {
 	}
 	private JButton getBtnGertaerakKopiatu() {
 		if (btnGertaerakKopiatu == null) {
-			btnGertaerakKopiatu = new JButton(ResourceBundle.getBundle("Etiquetas").getString("GertaerakKopiatu")); //$NON-NLS-1$ //$NON-NLS-2$
+			btnGertaerakKopiatu = new JButton(ResourceBundle.getBundle(ETIK).getString("GertaerakKopiatu")); //$NON-NLS-1$ //$NON-NLS-2$
 			btnGertaerakKopiatu.setForeground(Color.DARK_GRAY);
 			btnGertaerakKopiatu.setBackground(Color.PINK);
 			btnGertaerakKopiatu.addActionListener(new ActionListener() {
