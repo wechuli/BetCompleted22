@@ -1,16 +1,16 @@
 
-+domain.Event#getEventDate()Ljava/util/Date;F
-</Users/iturrioz/git/Bets2021/src/main/java/domain/Event.javaE E("1*¸
-1F
-</Users/iturrioz/git/Bets2021/src/main/java/domain/Event.javaF	 F(ˆ
-…
-F
-</Users/iturrioz/git/Bets2021/src/main/java/domain/Event.javaF	 F(
-%0java.util.Date"__id**
-domain.Event"
-	eventDate"`
-F
-</Users/iturrioz/git/Bets2021/src/main/java/domain/Event.javaF F(
-
-%0java.util.DateB
-domain.Event
+-domain.Question#getResult()Ljava/lang/String;P
+DC:/Users/aitor/git/BetCompleted22/src/main/java/domain/Question.java‚ ‚("1*Ú
+1P
+DC:/Users/aitor/git/BetCompleted22/src/main/java/domain/Question.javaƒ	 ƒ(”
+‘
+P
+DC:/Users/aitor/git/BetCompleted22/src/main/java/domain/Question.javaƒ	 ƒ(
+%0java.lang.String"__id**
+domain.Question"
+result"l
+P
+DC:/Users/aitor/git/BetCompleted22/src/main/java/domain/Question.javaƒ ƒ(
+
+%0java.lang.StringB
+domain.Question

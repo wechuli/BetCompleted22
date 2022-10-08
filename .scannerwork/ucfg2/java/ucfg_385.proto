@@ -1,0 +1,78 @@
+
+*domain.Apustua#equals(Ljava/lang/Object;)ZM
+CC:/Users/aitor/git/BetCompleted22/src/main/java/domain/Apustua.javaY Y("startingBlock*«
+2M
+CC:/Users/aitor/git/BetCompleted22/src/main/java/domain/Apustua.java^
+ ^("W
+M
+CC:/Users/aitor/git/BetCompleted22/src/main/java/domain/Apustua.java^ ^(
+""*Ó
+3M
+CC:/Users/aitor/git/BetCompleted22/src/main/java/domain/Apustua.java] ](¼¹
+M
+CC:/Users/aitor/git/BetCompleted22/src/main/java/domain/Apustua.java] ](
+%0java.lang.Class",java.lang.Object#getClass()Ljava/lang/Class;*
+
+ojava.lang.Object2
+getClass()·´
+M
+CC:/Users/aitor/git/BetCompleted22/src/main/java/domain/Apustua.java] ](#
+%1java.lang.Class",java.lang.Object#getClass()Ljava/lang/Class;*
+domain.Apustua2
+getClass()*
+2
+1*þ
+startingBlockM
+CC:/Users/aitor/git/BetCompleted22/src/main/java/domain/Apustua.javaY Y( •
+’
+M
+CC:/Users/aitor/git/BetCompleted22/src/main/java/domain/Apustua.javaX X(
+
+%5"
+__annotate*
+java.lang.Override*
+
+ojava.lang.Object~
+|
+M
+CC:/Users/aitor/git/BetCompleted22/src/main/java/domain/Apustua.javaY Y(
+ojava.lang.Object"__annotation*
+
+%5*
+3
+4*«
+4M
+CC:/Users/aitor/git/BetCompleted22/src/main/java/domain/Apustua.java[
+ [("W
+M
+CC:/Users/aitor/git/BetCompleted22/src/main/java/domain/Apustua.java[ [(
+""*´
+1M
+CC:/Users/aitor/git/BetCompleted22/src/main/java/domain/Apustua.java` `(†
+ƒ
+M
+CC:/Users/aitor/git/BetCompleted22/src/main/java/domain/Apustua.java` `(
+adomain.Apustua"__id*
+
+ojava.lang.ObjectÉÆ
+M
+CC:/Users/aitor/git/BetCompleted22/src/main/java/domain/Apustua.javaa	 a( 
+%2java.lang.Integer"4domain.Apustua#getApostuaNumber()Ljava/lang/Integer;*
+domain.Apustua2getApostuaNumber()ÌÉ
+M
+CC:/Users/aitor/git/BetCompleted22/src/main/java/domain/Apustua.javaa( a(<
+%3java.lang.Integer"4domain.Apustua#getApostuaNumber()Ljava/lang/Integer;*
+
+adomain.Apustua2getApostuaNumber()âß
+M
+CC:/Users/aitor/git/BetCompleted22/src/main/java/domain/Apustua.javaa	 a(=
+%4boolean"-java.lang.Integer#equals(Ljava/lang/Object;)Z*
+
+%2java.lang.Integer*
+
+%3java.lang.Integer2equals(Ljava/lang/Object;)"W
+M
+CC:/Users/aitor/git/BetCompleted22/src/main/java/domain/Apustua.javaa a(>
+"":
+ojava.lang.ObjectB
+domain.Apustua

@@ -1,16 +1,17 @@
 
-0domain.Event#getEventNumber()Ljava/lang/Integer;F
-</Users/iturrioz/git/Bets2021/src/main/java/domain/Event.java5 5("1*À
-1F
-</Users/iturrioz/git/Bets2021/src/main/java/domain/Event.java6	 6(
-Š
-F
-</Users/iturrioz/git/Bets2021/src/main/java/domain/Event.java6	 6(
-%0java.lang.Integer"__id*!*
-domain.Event"
-eventNumber"c
-F
-</Users/iturrioz/git/Bets2021/src/main/java/domain/Event.java6 6(
-
-%0java.lang.IntegerB
-domain.Event
+/domain.Question#getQuestion()Ljava/lang/String;N
+DC:/Users/aitor/git/BetCompleted22/src/main/java/domain/Question.javaV V("1*Ö
+1N
+DC:/Users/aitor/git/BetCompleted22/src/main/java/domain/Question.javaW	 W(”
+‘
+N
+DC:/Users/aitor/git/BetCompleted22/src/main/java/domain/Question.javaW	 W(
+%0java.lang.String"__id*!*
+domain.Question"
+
+question"j
+N
+DC:/Users/aitor/git/BetCompleted22/src/main/java/domain/Question.javaW W(
+
+%0java.lang.StringB
+domain.Question

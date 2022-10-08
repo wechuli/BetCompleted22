@@ -1,15 +1,60 @@
 
-domain.Event#hashCode()IF
-</Users/iturrioz/git/Bets2021/src/main/java/domain/Event.javaq q("1*­
-1F
-</Users/iturrioz/git/Bets2021/src/main/java/domain/Event.javar r(
-Š
-F
-</Users/iturrioz/git/Bets2021/src/main/java/domain/Event.javat t('
-%0java.lang.Integer"__id*!*
-domain.Event"
-eventNumber"P
-F
-</Users/iturrioz/git/Bets2021/src/main/java/domain/Event.javau u(
-""B
-domain.Event
+,domain.Question#toString()Ljava/lang/String;P
+DC:/Users/aitor/git/BetCompleted22/src/main/java/domain/Question.java³ ³("1*Í
+
+1P
+DC:/Users/aitor/git/BetCompleted22/src/main/java/domain/Question.java´	 ´(
+š
+P
+DC:/Users/aitor/git/BetCompleted22/src/main/java/domain/Question.java´	 ´(
+%0java.lang.Integer"__id*'*%
+domain.Question"
+questionNumber™
+–
+P
+DC:/Users/aitor/git/BetCompleted22/src/main/java/domain/Question.java´	 ´(
+%1java.lang.String"__concat*
+
+%0java.lang.Integer*
+;–
+“
+P
+DC:/Users/aitor/git/BetCompleted22/src/main/java/domain/Question.java´ ´($
+%2java.lang.String"__id*!*
+domain.Question"
+
+question«
+¨
+P
+DC:/Users/aitor/git/BetCompleted22/src/main/java/domain/Question.java´	 ´($
+%3java.lang.String"__concat*
+
+%1java.lang.String*
+
+%2java.lang.String˜
+•
+P
+DC:/Users/aitor/git/BetCompleted22/src/main/java/domain/Question.java´	 ´((
+%4java.lang.String"__concat*
+
+%3java.lang.String*
+;»
+¸
+P
+DC:/Users/aitor/git/BetCompleted22/src/main/java/domain/Question.java´+ ´(F
+%5java.lang.String".java.lang.Double#toString(D)Ljava/lang/String;*"
+java.lang.Double*
+""«
+¨
+P
+DC:/Users/aitor/git/BetCompleted22/src/main/java/domain/Question.java´	 ´(F
+%6java.lang.String"__concat*
+
+%4java.lang.String*
+
+%5java.lang.String"l
+P
+DC:/Users/aitor/git/BetCompleted22/src/main/java/domain/Question.java´ ´(G
+
+%6java.lang.StringB
+domain.Question

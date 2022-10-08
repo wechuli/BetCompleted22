@@ -80,17 +80,20 @@ public class Apustua implements Serializable{
 		}
 		return false;
 	}
-	
+	//kuota.getQuestion().getQuestionNumber().equlas(quo.getQuestion().getQuestionNumber()) && kuota.getQuestion().getQuestionNumber().equlas(quo.getQuoteNumber()!=kuota.getQuoteNumber())
 	public void eguneratuApustuKant(Sport s) {
 		s.eguneratuApustuKantitatea();
 	}
 	
 	@Override
 	public boolean equals(Object o) {
-		Apustua a = (Apustua) o; 
-		if(a==null) {
+		if(o==null) {
+			return false;
+		} 
+		if(o.getClass()!= this.getClass()) {
 			return false;
 		}
+		Apustua a = (Apustua) o; 
 		return this.getApostuaNumber().equals(a.getApostuaNumber()); 
 	}
 }

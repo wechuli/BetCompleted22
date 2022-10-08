@@ -1,0 +1,5 @@
+dataAccess.DataAccess#mezuakLortu(LElkarrizketa;)Ljava/util/List;
+java.util.LinkedList#<init>()V
+domain.MezuakContainer#instance-init#
+domain.MezuakContainer#<init>(LMessage;)V
+java.util.LinkedList#instance-init#

@@ -1,0 +1,16 @@
+
++domain.Event#getEventDate()Ljava/util/Date;K
+AC:/Users/aitor/git/BetCompleted22/src/main/java/domain/Event.javaM M("1*Ç
+1K
+AC:/Users/aitor/git/BetCompleted22/src/main/java/domain/Event.javaN	 N(
+Š
+K
+AC:/Users/aitor/git/BetCompleted22/src/main/java/domain/Event.javaN	 N(
+%0java.util.Date"__id**
+domain.Event"
+	eventDate"e
+K
+AC:/Users/aitor/git/BetCompleted22/src/main/java/domain/Event.javaN N(
+
+%0java.util.DateB
+domain.Event

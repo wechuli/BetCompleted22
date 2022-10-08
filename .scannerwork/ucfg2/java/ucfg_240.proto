@@ -1,0 +1,62 @@
+
+hbusinessLogic.BLFacadeImplementation#jarraitu(Ldomain/Registered;Ldomain/Registered;Ljava/lang/Double;)Ze
+YC:/Users/aitor/git/BetCompleted22/src/main/java/businessLogic/BLFacadeImplementation.javaπ π("startingBlock*‚
+startingBlocke
+YC:/Users/aitor/git/BetCompleted22/src/main/java/businessLogic/BLFacadeImplementation.javaπ π(N©
+¶
+e
+YC:/Users/aitor/git/BetCompleted22/src/main/java/businessLogic/BLFacadeImplementation.java∏ ∏(
+%0"
+__annotate*
+	WebMethod*
+
+jabeadomain.Registeredú
+ô
+e
+YC:/Users/aitor/git/BetCompleted22/src/main/java/businessLogic/BLFacadeImplementation.javaπ$ π()
+jabeadomain.Registered"__annotation*
+
+%0≠
+™
+e
+YC:/Users/aitor/git/BetCompleted22/src/main/java/businessLogic/BLFacadeImplementation.java∏ ∏(
+%1"
+__annotate*
+	WebMethod* 
+
+	jarraituadomain.Registered†
+ù
+e
+YC:/Users/aitor/git/BetCompleted22/src/main/java/businessLogic/BLFacadeImplementation.javaπ6 π(?
+	jarraituadomain.Registered"__annotation*
+
+%1®
+•
+e
+YC:/Users/aitor/git/BetCompleted22/src/main/java/businessLogic/BLFacadeImplementation.java∏ ∏(
+%2"
+__annotate*
+	WebMethod*
+
+limitjava.lang.Doubleõ
+ò
+e
+YC:/Users/aitor/git/BetCompleted22/src/main/java/businessLogic/BLFacadeImplementation.javaπH π(M
+limitjava.lang.Double"__annotation*
+
+%2*
+1*Ó
+1e
+YC:/Users/aitor/git/BetCompleted22/src/main/java/businessLogic/BLFacadeImplementation.java∫ ∫(ê
+ç
+e
+YC:/Users/aitor/git/BetCompleted22/src/main/java/businessLogic/BLFacadeImplementation.javaª ª(8
+bjava.lang.Boolean"__id*
+"""o
+e
+YC:/Users/aitor/git/BetCompleted22/src/main/java/businessLogic/BLFacadeImplementation.javaΩ Ω(
+"":
+jabeadomain.Registered:
+	jarraituadomain.Registered:
+limitjava.lang.DoubleB(&
+$businessLogic.BLFacadeImplementation

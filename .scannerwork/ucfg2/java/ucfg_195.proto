@@ -1,0 +1,92 @@
+
+(domain.Event#equals(Ljava/lang/Object;)ZM
+AC:/Users/aitor/git/BetCompleted22/src/main/java/domain/Event.javaš š("startingBlock*«
+2M
+AC:/Users/aitor/git/BetCompleted22/src/main/java/domain/Event.java£
+ £("W
+M
+AC:/Users/aitor/git/BetCompleted22/src/main/java/domain/Event.java£ £(
+""*œ
+3M
+AC:/Users/aitor/git/BetCompleted22/src/main/java/domain/Event.java¡ ¡(Š
+‡
+M
+AC:/Users/aitor/git/BetCompleted22/src/main/java/domain/Event.java¡ ¡(
+otherdomain.Event"__id*
+
+objjava.lang.Object”
+‘
+M
+AC:/Users/aitor/git/BetCompleted22/src/main/java/domain/Event.java¢ ¢(
+%2java.lang.Integer"__id*!*
+domain.Event"
+eventNumber›
+˜
+M
+AC:/Users/aitor/git/BetCompleted22/src/main/java/domain/Event.java¢ ¢(&
+%3java.lang.Integer"__id*(*&
+
+otherdomain.Event"
+eventNumber*
+2
+1*†
+startingBlockM
+AC:/Users/aitor/git/BetCompleted22/src/main/java/domain/Event.javaš š("—
+”
+M
+AC:/Users/aitor/git/BetCompleted22/src/main/java/domain/Event.java™ ™(
+
+%4"
+__annotate*
+java.lang.Override*
+
+objjava.lang.Object€
+~
+M
+AC:/Users/aitor/git/BetCompleted22/src/main/java/domain/Event.javaš š(!
+objjava.lang.Object"__annotation*
+
+%4*	
+5
+6
+8*«
+4M
+AC:/Users/aitor/git/BetCompleted22/src/main/java/domain/Event.java 
+  ("W
+M
+AC:/Users/aitor/git/BetCompleted22/src/main/java/domain/Event.java   (
+""*Ó
+5M
+AC:/Users/aitor/git/BetCompleted22/src/main/java/domain/Event.javaŸ Ÿ(µ²
+M
+AC:/Users/aitor/git/BetCompleted22/src/main/java/domain/Event.javaŸ Ÿ(
+%0java.lang.Class",java.lang.Object#getClass()Ljava/lang/Class;*
+domain.Event2
+getClass()¾»
+M
+AC:/Users/aitor/git/BetCompleted22/src/main/java/domain/Event.javaŸ Ÿ("
+%1java.lang.Class",java.lang.Object#getClass()Ljava/lang/Class;*
+
+objjava.lang.Object2
+getClass()*
+3
+4*«
+6M
+AC:/Users/aitor/git/BetCompleted22/src/main/java/domain/Event.javaž
+ ž("W
+M
+AC:/Users/aitor/git/BetCompleted22/src/main/java/domain/Event.javaž ž(
+""*«
+8M
+AC:/Users/aitor/git/BetCompleted22/src/main/java/domain/Event.javaœ
+ œ("W
+M
+AC:/Users/aitor/git/BetCompleted22/src/main/java/domain/Event.javaœ œ(
+""*«
+1M
+AC:/Users/aitor/git/BetCompleted22/src/main/java/domain/Event.java¤	 ¤("W
+M
+AC:/Users/aitor/git/BetCompleted22/src/main/java/domain/Event.java¤ ¤(
+"":
+objjava.lang.ObjectB
+domain.Event

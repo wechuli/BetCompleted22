@@ -1,16 +1,161 @@
 
-3configuration.ConfigXML#getUser()Ljava/lang/String;Q
-G/Users/iturrioz/git/Bets2021/src/main/java/configuration/ConfigXML.java9 9("1*ã
-1Q
-G/Users/iturrioz/git/Bets2021/src/main/java/configuration/ConfigXML.java:	 :(›
-˜
-Q
-G/Users/iturrioz/git/Bets2021/src/main/java/configuration/ConfigXML.java:	 :(
-%0java.lang.String"__id*%*#
-configuration.ConfigXML"
-user"m
-Q
-G/Users/iturrioz/git/Bets2021/src/main/java/configuration/ConfigXML.java: :(
+;gui.RegisteredGUI#getJButtonDesLogin()Ljavax/swing/JButton;R
+FC:/Users/aitor/git/BetCompleted22/src/main/java/gui/RegisteredGUI.javaã ã(#"3*Ã 
+2R
+FC:/Users/aitor/git/BetCompleted22/src/main/java/gui/RegisteredGUI.javaå! å(/ö
+ó
+R
+FC:/Users/aitor/git/BetCompleted22/src/main/java/gui/RegisteredGUI.javaå! å(F
+%1java.util.ResourceBundle"Pjava.util.ResourceBundle#getBundle(Ljava/lang/String;)Ljava/util/ResourceBundle;*"
+java.util.ResourceBundle*
+	Etiquetasˆ…
+R
+FC:/Users/aitor/git/BetCompleted22/src/main/java/gui/RegisteredGUI.javaå! å(\
+%2java.lang.String"Hjava.util.ResourceBundle#getString(Ljava/lang/String;)Ljava/lang/String;* 
+
+%1java.util.ResourceBundle*
+
+DesLogin2getString(Ljava/lang/String;)‡„
+R
+FC:/Users/aitor/git/BetCompleted22/src/main/java/gui/RegisteredGUI.javaå å( 
+%3javax.swing.JButton"javax.swing.JButtonÅ
+Â
+R
+FC:/Users/aitor/git/BetCompleted22/src/main/java/gui/RegisteredGUI.javaå å(]
+%4"/javax.swing.JButton#<init>(Ljava/lang/String;)V*
+
+%3javax.swing.JButton*
 
-%0java.lang.StringB
-configuration.ConfigXML
+%2java.lang.String¤
+¡
+R
+FC:/Users/aitor/git/BetCompleted22/src/main/java/gui/RegisteredGUI.javaå å(](
+gui.RegisteredGUI"
+jButtonDesLogin"__id*
+
+%3javax.swing.JButton¤
+¡
+R
+FC:/Users/aitor/git/BetCompleted22/src/main/java/gui/RegisteredGUI.javaæ æ(
+%5javax.swing.JButton"__id***(
+gui.RegisteredGUI"
+jButtonDesLogino
+m
+R
+FC:/Users/aitor/git/BetCompleted22/src/main/java/gui/RegisteredGUI.javaæ. æ(8	
+%6int"__id*
+""zx
+R
+FC:/Users/aitor/git/BetCompleted22/src/main/java/gui/RegisteredGUI.javaæ æ(#
+%7java.awt.Font"java.awt.FontÀ
+½
+R
+FC:/Users/aitor/git/BetCompleted22/src/main/java/gui/RegisteredGUI.javaæ æ(=
+%8"+java.awt.Font#<init>(Ljava/lang/String;II)V*
+
+%7java.awt.Font*
+
+Tahoma*
+	
+%6int*2ãà
+R
+FC:/Users/aitor/git/BetCompleted22/src/main/java/gui/RegisteredGUI.javaæ æ(>
+
+%9void"0javax.swing.JComponent#setFont(Ljava/awt/Font;)V*
+
+%5javax.swing.JButton*
+
+%7java.awt.Font2setFont(Ljava/awt/Font;)¥
+¢
+R
+FC:/Users/aitor/git/BetCompleted22/src/main/java/gui/RegisteredGUI.javaç ç(
+%10javax.swing.JButton"__id***(
+gui.RegisteredGUI"
+jButtonDesLogin{
+y
+R
+FC:/Users/aitor/git/BetCompleted22/src/main/java/gui/RegisteredGUI.javaç! ç(,
+%11java.awt.Color"__id*
+""õò
+R
+FC:/Users/aitor/git/BetCompleted22/src/main/java/gui/RegisteredGUI.javaç ç(-
+%12void"7javax.swing.JComponent#setForeground(Ljava/awt/Color;)V*
+
+%10javax.swing.JButton*
+
+%11java.awt.Color2setForeground(Ljava/awt/Color;)¥
+¢
+R
+FC:/Users/aitor/git/BetCompleted22/src/main/java/gui/RegisteredGUI.javaè è(
+%13javax.swing.JButton"__id***(
+gui.RegisteredGUI"
+jButtonDesLogin{
+y
+R
+FC:/Users/aitor/git/BetCompleted22/src/main/java/gui/RegisteredGUI.javaè! è(0
+%14java.awt.Color"__id*
+""õò
+R
+FC:/Users/aitor/git/BetCompleted22/src/main/java/gui/RegisteredGUI.javaè è(1
+%15void"7javax.swing.JComponent#setBackground(Ljava/awt/Color;)V*
+
+%13javax.swing.JButton*
+
+%14java.awt.Color2setBackground(Ljava/awt/Color;)¥
+¢
+R
+FC:/Users/aitor/git/BetCompleted22/src/main/java/gui/RegisteredGUI.javaé é(
+%16javax.swing.JButton"__id***(
+gui.RegisteredGUI"
+jButtonDesLoginˆ…
+R
+FC:/Users/aitor/git/BetCompleted22/src/main/java/gui/RegisteredGUI.javaé) é(7
+%17gui.RegisteredGUI$7"gui.RegisteredGUI$7˜
+•
+R
+FC:/Users/aitor/git/BetCompleted22/src/main/java/gui/RegisteredGUI.javaé% ï(
+%18"java.lang.Object#<init>()V*
+
+%17gui.RegisteredGUI$7¤¡
+R
+FC:/Users/aitor/git/BetCompleted22/src/main/java/gui/RegisteredGUI.javaé ï(
+%19void"Njavax.swing.AbstractButton#addActionListener(Ljava/awt/event/ActionListener;)V*
+
+%16javax.swing.JButton*
+
+%17gui.RegisteredGUI$722addActionListener(Ljava/awt/event/ActionListener;)¥
+¢
+R
+FC:/Users/aitor/git/BetCompleted22/src/main/java/gui/RegisteredGUI.javað ð(
+%20javax.swing.JButton"__id***(
+gui.RegisteredGUI"
+jButtonDesLoginÓÐ
+R
+FC:/Users/aitor/git/BetCompleted22/src/main/java/gui/RegisteredGUI.javað ð(/
+%21void"#java.awt.Component#setBounds(IIII)V*
+
+%20javax.swing.JButton*2Ó*2ä*2Ÿ*212setBounds(IIII)*
+1*†
+3R
+FC:/Users/aitor/git/BetCompleted22/src/main/java/gui/RegisteredGUI.javaä ä(¤
+¡
+R
+FC:/Users/aitor/git/BetCompleted22/src/main/java/gui/RegisteredGUI.javaä ä(
+%0javax.swing.JButton"__id***(
+gui.RegisteredGUI"
+jButtonDesLogin*
+2
+1*ó
+1R
+FC:/Users/aitor/git/BetCompleted22/src/main/java/gui/RegisteredGUI.javaò	 ò(¥
+¢
+R
+FC:/Users/aitor/git/BetCompleted22/src/main/java/gui/RegisteredGUI.javaò	 ò(
+%22javax.swing.JButton"__id***(
+gui.RegisteredGUI"
+jButtonDesLogin"r
+R
+FC:/Users/aitor/git/BetCompleted22/src/main/java/gui/RegisteredGUI.javaò ò(
+
+%22javax.swing.JButtonB
+gui.RegisteredGUI
