@@ -116,6 +116,24 @@ public class TestDataAccess {
 			
 		}
 		
+		public void ApustuaIrabazi(ApustuAnitza apustua) {
+			ApustuAnitza apustuAnitza = db.find(ApustuAnitza.class, apustua.getApustuAnitzaNumber());
+			Registered reg = (Registered) apustuAnitza.getUser();
+			Registered r = (Registered) db.find(User.class, reg.getUsername());
+			db.getTransaction().begin();
+			apustuAnitza.setEgoera("irabazita");
+			Double d=apustuAnitza.getBalioa();
+			for(Apustua ap: apustuAnitza.getApustuak()) {
+				d = d*ap.getKuota().getQuote();
+			}
+			r.updateDiruKontua(d);
+			r.setIrabazitakoa(r.getIrabazitakoa()+d);
+			r.setZenbat(r.getZenbat()+1);
+			Transaction t = new Transaction(r, d, new Date(), "ApustuaIrabazi"); 
+			db.persist(t);
+			db.getTransaction().commit();
+		}
+		
 		public void EmaitzakIpini(Quote quote) throws EventNotFinished{
 			
 			Quote q = db.find(Quote.class, quote); 
@@ -149,25 +167,6 @@ public class TestDataAccess {
 					this.ApustuaIrabazi(a.getApustuAnitza());
 				}
 			}
-		}
-
-
-		private void ApustuaIrabazi(ApustuAnitza apustua) {
-			ApustuAnitza apustuAnitza = db.find(ApustuAnitza.class, apustua.getApustuAnitzaNumber());
-			Registered reg = (Registered) apustuAnitza.getUser();
-			Registered r = (Registered) db.find(User.class, reg.getUsername());
-			db.getTransaction().begin();
-			apustuAnitza.setEgoera("irabazita");
-			Double d=apustuAnitza.getBalioa();
-			for(Apustua ap: apustuAnitza.getApustuak()) {
-				d = d*ap.getKuota().getQuote();
-			}
-			r.updateDiruKontua(d);
-			r.setIrabazitakoa(r.getIrabazitakoa()+d);
-			r.setZenbat(r.getZenbat()+1);
-			Transaction t = new Transaction(r, d, new Date(), "ApustuaIrabazi"); 
-			db.persist(t);
-			db.getTransaction().commit();
 		}
 }
 

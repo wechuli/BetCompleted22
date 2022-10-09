@@ -2,10 +2,15 @@ package test.EmaitzakIpini;
 
 import static org.junit.Assert.*;
 
-import org.junit.Test;
+import org.junit.runner.RunWith;
+
+import org.mockito.ArgumentCaptor;
+import org.mockito.InjectMocks;
+import org.mockito.Mock;
+import org.mockito.Mockito;
+import org.mockito.junit.MockitoJUnitRunner;
 
 import configuration.UtilDate;
-import dataAccess.DataAccess;
 import domain.ApustuAnitza;
 import domain.Apustua;
 import domain.Event;
@@ -15,39 +20,57 @@ import domain.Registered;
 import domain.Sport;
 import domain.Team;
 import exceptions.EventNotFinished;
+import test.businessLogic.TestFacadeImplementation;
 import test.dataAccess.TestDataAccess;
 
-public class EmaitzakIpiniDAWTest {
+import org.junit.Test;
 
-	//sut:system under test
-	static DataAccess sut=new DataAccess();
-		
-	//additional operations needed to execute the test 
-	static TestDataAccess testDA=new TestDataAccess();
-		
-	//Sortutako Quote-a ez dago datubasean
-	@Test 
+@RunWith(MockitoJUnitRunner.class)
+public class EmaitzakIpiniINTTest {
+
+	@Mock
+	TestDataAccess dataAccess;
+
+	@InjectMocks
+	TestFacadeImplementation sut;
+	
+	@Test
 	public void test1() {
-		Team team1= new Team("Almeria");
-		Team team2= new Team("Athletic");
-		Event ev111=new Event(1, "Almeria-Athletic", UtilDate.newDate(2022,10,17), team1, team2);
-		Sport sp1=new Sport("Futbol");
-		sp1.addEvent(ev111);
-		Question q1=ev111.addQuestion("Zeinek irabaziko du partidua?",1);
-		Quote quote111 = q1.addQuote(1.3, "1", q1);
-			
 		try {
+			sut.EmaitzakIpini(null);
+			
+			Mockito.verify(dataAccess, Mockito.times(1)).EmaitzakIpini(null);
+			
+			fail();
+		} catch (Exception e) {
+			
+		}
+	}
+
+	@Test
+	public void test2() {
+		try {
+			Team team1= new Team("Almeria");
+			Team team2= new Team("Athletic");
+			Event ev111=new Event(1, "Almeria-Athletic", UtilDate.newDate(2022,10,17), team1, team2);
+			Sport sp1=new Sport("Futbol");
+			sp1.addEvent(ev111);
+			Question q1=ev111.addQuestion("Zeinek irabaziko du partidua?",1);
+			Quote quote111 = q1.addQuote(1.3, "1", q1);
+			
 			sut.EmaitzakIpini(quote111);
-		} catch (IllegalArgumentException e) {
-			fail("Parametro bezala sartu den Quote-a ez dago datubasean");
-		} catch (EventNotFinished e) {
-			fail("Gertaera amiatu gabe dago");
+			
+			Mockito.verify(dataAccess, Mockito.times(1)).EmaitzakIpini(quote111);
+			
+			fail();
+		} catch (Exception e) {
+			
 		}
 	}
 	
-	//Gertaeraren data oraindik ez da igaro, beraz, amaitu gabe dago
 	@Test
-	public void test2() {
+	public void test3() {
+		
 		Team team1= new Team("Almeria");
 		Team team2= new Team("Athletic");
 		Event ev111=new Event(1, "Almeria-Athletic", UtilDate.newDate(2022,10,17), team1, team2);
@@ -55,51 +78,24 @@ public class EmaitzakIpiniDAWTest {
 		sp1.addEvent(ev111);
 		Question q1=ev111.addQuestion("Zeinek irabaziko du partidua?",1);
 		Quote quote111 = q1.addQuote(1.3, "1", q1);
-		
 		try {
-			testDA.open();
-			testDA.createEvent(ev111);
-			testDA.close();
 			
-			try {
-				sut.EmaitzakIpini(quote111);
-			} catch (EventNotFinished e) {
-				fail("Gertaera ez da amaitu oraindik");
-			}
+			
+			dataAccess.open();
+			dataAccess.createEvent(ev111);
+			dataAccess.close();
+			
+			sut.EmaitzakIpini(quote111);
+			
+			Mockito.verify(dataAccess, Mockito.times(1)).EmaitzakIpini(quote111);
+			
+			fail("Gertaera ez da amaitu oraindik");
+		} catch (Exception e) {
 			
 		}finally {
-			testDA.open();
-			testDA.removeEvent(ev111);
-			testDA.close();
-		}
-	}
-
-	//Quote-ak ez du apusturik beraz ez da for begiztatan sartuko
-	@Test
-	public void test3() {
-		Team team1= new Team("Almeria");
-		Team team2= new Team("Athletic");
-		Event ev111=new Event(1, "Almeria-Athletic", UtilDate.newDate(2022,10,8), team1, team2);
-		Sport sp1=new Sport("Futbol");
-		sp1.addEvent(ev111);
-		Question q1=ev111.addQuestion("Zeinek irabaziko du partidua?",1);
-		Quote quote111 = q1.addQuote(1.3, "1", q1);
-		
-		try {
-			testDA.open();
-			testDA.createEvent(ev111);
-			testDA.close();
-			
-			try {
-				sut.EmaitzakIpini(quote111);
-			} catch (EventNotFinished e) {
-				fail("Gertaera ez da amaitu oraindik");
-			}
-			
-		}finally {
-			testDA.open();
-			testDA.removeEvent(ev111);
-			testDA.close();
+			dataAccess.open();
+			dataAccess.removeEvent(ev111);
+			dataAccess.close();
 		}
 	}
 	
@@ -119,25 +115,28 @@ public class EmaitzakIpiniDAWTest {
 		apA1.addApustua(ap1);
 		
 		try {
-			testDA.open();
-			testDA.createEvent(ev111);
-			testDA.close();
+			dataAccess.open();
+			dataAccess.createEvent(ev111);
+			dataAccess.close();
 			
 			try {
 				sut.EmaitzakIpini(quote111);
+				
+				Mockito.verify(dataAccess, Mockito.times(1)).EmaitzakIpini(quote111);
+				
 				assertEquals("galduta", ap1.getEgoera());
 			} catch (EventNotFinished e) {
 				fail("Gertaera ez da amaitu oraindik");
 			}
 			
 		}finally {
-			testDA.open();
-			testDA.removeEvent(ev111);
-			testDA.close();
+			dataAccess.open();
+			dataAccess.removeEvent(ev111);
+			dataAccess.close();
 		}
 	}
 	
-	//Apustua irabazita bezala markatu da
+	//Apustua galduta bezala markatu da
 	@Test
 	public void test5() {
 		Registered reg3 = new Registered("Gotzon", "123", 1111);
@@ -153,21 +152,24 @@ public class EmaitzakIpiniDAWTest {
 		apA1.addApustua(ap1);
 		
 		try {
-			testDA.open();
-			testDA.createEvent(ev111);
-			testDA.close();
+			dataAccess.open();
+			dataAccess.createEvent(ev111);
+			dataAccess.close();
 			
 			try {
 				sut.EmaitzakIpini(quote111);
+				
+				Mockito.verify(dataAccess, Mockito.times(1)).EmaitzakIpini(quote111);
+				
 				assertEquals("irabazita", ap1.getEgoera());
 			} catch (EventNotFinished e) {
 				fail("Gertaera ez da amaitu oraindik");
 			}
 			
 		}finally {
-			testDA.open();
-			testDA.removeEvent(ev111);
-			testDA.close();
+			dataAccess.open();
+			dataAccess.removeEvent(ev111);
+			dataAccess.close();
 		}
 	}
 }
