@@ -24,7 +24,7 @@ import test.dataAccess.TestDataAccess;
 public class TestFacadeImplementation {
 	protected static EntityManager  db;
 	TestDataAccess dbManagerTest;
- 	
+ 	 
     
 	   public TestFacadeImplementation()  {
 			
