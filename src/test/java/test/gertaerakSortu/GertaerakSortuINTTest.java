@@ -30,7 +30,7 @@ import test.dataAccess.TestDataAccess;
 import org.junit.Test;
 
 @RunWith(MockitoJUnitRunner.class)
-public class GertaerakSortuINT {
+public class GertaerakSortuINTTest {
 	  Event mockedEvent=Mockito.mock(Event.class);
 	@Mock
 	TestDataAccess dataAccess;

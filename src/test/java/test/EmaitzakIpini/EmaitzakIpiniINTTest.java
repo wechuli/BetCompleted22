@@ -58,9 +58,11 @@ public class EmaitzakIpiniINTTest {
 			Question q1=ev111.addQuestion("Zeinek irabaziko du partidua?",1);
 			Quote quote111 = q1.addQuote(1.3, "1", q1);
 			
+			ArgumentCaptor<Quote> quoteCaptor = ArgumentCaptor.forClass(Quote.class);
+			
 			sut.EmaitzakIpini(quote111);
 			
-			Mockito.verify(dataAccess, Mockito.times(1)).EmaitzakIpini(quote111);
+			Mockito.verify(dataAccess, Mockito.times(1)).EmaitzakIpini(quoteCaptor.capture());
 			
 			fail();
 		} catch (Exception e) {
@@ -78,8 +80,10 @@ public class EmaitzakIpiniINTTest {
 		sp1.addEvent(ev111);
 		Question q1=ev111.addQuestion("Zeinek irabaziko du partidua?",1);
 		Quote quote111 = q1.addQuote(1.3, "1", q1);
+		
+		ArgumentCaptor<Quote> quoteCaptor = ArgumentCaptor.forClass(Quote.class);
+		
 		try {
-			
 			
 			dataAccess.open();
 			dataAccess.createEvent(ev111);
@@ -87,7 +91,7 @@ public class EmaitzakIpiniINTTest {
 			
 			sut.EmaitzakIpini(quote111);
 			
-			Mockito.verify(dataAccess, Mockito.times(1)).EmaitzakIpini(quote111);
+			Mockito.verify(dataAccess, Mockito.times(1)).EmaitzakIpini(quoteCaptor.capture());
 			
 			fail("Gertaera ez da amaitu oraindik");
 		} catch (Exception e) {
@@ -119,10 +123,12 @@ public class EmaitzakIpiniINTTest {
 			dataAccess.createEvent(ev111);
 			dataAccess.close();
 			
+			ArgumentCaptor<Quote> quoteCaptor = ArgumentCaptor.forClass(Quote.class);
+			
 			try {
 				sut.EmaitzakIpini(quote111);
 				
-				Mockito.verify(dataAccess, Mockito.times(1)).EmaitzakIpini(quote111);
+				Mockito.verify(dataAccess, Mockito.times(1)).EmaitzakIpini(quoteCaptor.capture());
 				
 				assertEquals("galduta", ap1.getEgoera());
 			} catch (EventNotFinished e) {
@@ -156,10 +162,12 @@ public class EmaitzakIpiniINTTest {
 			dataAccess.createEvent(ev111);
 			dataAccess.close();
 			
+			ArgumentCaptor<Quote> quoteCaptor = ArgumentCaptor.forClass(Quote.class);
+			
 			try {
 				sut.EmaitzakIpini(quote111);
 				
-				Mockito.verify(dataAccess, Mockito.times(1)).EmaitzakIpini(quote111);
+				Mockito.verify(dataAccess, Mockito.times(1)).EmaitzakIpini(quoteCaptor.capture());
 				
 				assertEquals("irabazita", ap1.getEgoera());
 			} catch (EventNotFinished e) {
