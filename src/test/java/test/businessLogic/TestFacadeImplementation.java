@@ -5,6 +5,7 @@ import java.util.Date;
 import java.util.Vector;
 
 import javax.persistence.EntityManager;
+import javax.persistence.TypedQuery;
 
 import configuration.ConfigXML;
 import domain.ApustuAnitza;
@@ -13,6 +14,8 @@ import domain.Event;
 import domain.Question;
 import domain.Quote;
 import domain.Registered;
+import domain.Sport;
+import domain.Team;
 import domain.Transaction;
 import domain.User;
 import exceptions.EventNotFinished;
@@ -91,6 +94,33 @@ public class TestFacadeImplementation {
 					this.ApustuaIrabazi(a.getApustuAnitza());
 				}
 			}
+		}
+		public boolean gertaerakSortu(String description,Date eventDate, String sport) {
+			boolean b = true;
+			db.getTransaction().begin();
+			Sport spo =db.find(Sport.class, sport);
+			if(spo!=null) {
+				TypedQuery<Event> Equery = db.createQuery("SELECT e FROM Event e WHERE e.getEventDate() =?1 ",Event.class);
+				Equery.setParameter(1, eventDate);
+				for(Event ev: Equery.getResultList()) {
+					if(ev.getDescription().equals(description)) {
+						b = false;
+					}
+				}
+				if(b) {
+					String[] taldeak = description.split("-");
+					Team lokala = new Team(taldeak[0]);
+					Team kanpokoa = new Team(taldeak[1]);
+					Event e = new Event(description, eventDate, lokala, kanpokoa);
+					e.setSport(spo);
+					spo.addEvent(e);
+					db.persist(e);
+				}
+			}else {
+				return false;
+			}
+			db.getTransaction().commit();
+			return b;
 		}
 		
 		/*public Event addEventWithQuestion(String desc, Date d, String q, float qty) {
