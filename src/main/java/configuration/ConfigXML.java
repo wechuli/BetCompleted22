@@ -70,7 +70,7 @@ public class ConfigXML {
 		return businessLogicLocal;
 	}
 	private static ConfigXML theInstance = new ConfigXML();
-
+ 
 	private ConfigXML(){
 		
 		  try {
