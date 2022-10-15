@@ -48,6 +48,7 @@ public class DataAccess  {
 	protected static EntityManager  db;
 	protected static EntityManagerFactory emf;
 
+	static final String apustuaEgin = "ApustuaEgin";
 
 	static ConfigXML c=ConfigXML.getInstance();
 
@@ -429,17 +430,17 @@ public class DataAccess  {
 			reg2.addApustuAnitza(apA9);
 			ke8.eguneratuKont(1);
 			
-			Transaction t1 = new Transaction(reg1, apA1.getBalioa(), new Date(), "ApustuaEgin");
-			Transaction t3 = new Transaction(reg2, apA4.getBalioa(), new Date(), "ApustuaEgin");
-			Transaction t4 = new Transaction(reg3, apA5.getBalioa(), new Date(), "ApustuaEgin");
-			Transaction t5 = new Transaction(reg4, apA3.getBalioa(), new Date(), "ApustuaEgin");
-			Transaction t6 = new Transaction(reg4, apA6.getBalioa(), new Date(), "ApustuaEgin");
-			Transaction t7 = new Transaction(reg1, apA7.getBalioa(), new Date(), "ApustuaEgin");
-			Transaction t8 = new Transaction(reg1, apA8.getBalioa(), new Date(), "ApustuaEgin");
-			Transaction t9 = new Transaction(reg2, apA9.getBalioa(), new Date(), "ApustuaEgin");
-			Transaction t10 = new Transaction(reg2, apA10.getBalioa(), new Date(), "ApustuaEgin");
-			Transaction t11 = new Transaction(reg3, apA11.getBalioa(), new Date(), "ApustuaEgin");
-			Transaction t12 = new Transaction(reg3, apA12.getBalioa(), new Date(), "ApustuaEgin");
+			Transaction t1 = new Transaction(reg1, apA1.getBalioa(), new Date(), apustuaEgin);
+			Transaction t3 = new Transaction(reg2, apA4.getBalioa(), new Date(), apustuaEgin);
+			Transaction t4 = new Transaction(reg3, apA5.getBalioa(), new Date(), apustuaEgin);
+			Transaction t5 = new Transaction(reg4, apA3.getBalioa(), new Date(), apustuaEgin);
+			Transaction t6 = new Transaction(reg4, apA6.getBalioa(), new Date(), apustuaEgin);
+			Transaction t7 = new Transaction(reg1, apA7.getBalioa(), new Date(), apustuaEgin);
+			Transaction t8 = new Transaction(reg1, apA8.getBalioa(), new Date(), apustuaEgin);
+			Transaction t9 = new Transaction(reg2, apA9.getBalioa(), new Date(), apustuaEgin);
+			Transaction t10 = new Transaction(reg2, apA10.getBalioa(), new Date(), apustuaEgin);
+			Transaction t11 = new Transaction(reg3, apA11.getBalioa(), new Date(), apustuaEgin);
+			Transaction t12 = new Transaction(reg3, apA12.getBalioa(), new Date(), apustuaEgin);
 			
 			reg1.addTransaction(t1);
 			reg2.addTransaction(t3);
@@ -998,7 +999,7 @@ public static void open(boolean initializeMode){
 			}
 			apustuAnitza.setApustuKopia(apustuBikoitzaGalarazi);
 			user.updateDiruKontua(-balioa);
-			Transaction t = new Transaction(user, balioa, new Date(), "ApustuaEgin"); 
+			Transaction t = new Transaction(user, balioa, new Date(), apustuaEgin); 
 			user.addApustuAnitza(apustuAnitza);
 			for(Apustua a: apustuAnitza.getApustuak()) {
 				Apustua apu = db.find(Apustua.class, a.getApostuaNumber());
