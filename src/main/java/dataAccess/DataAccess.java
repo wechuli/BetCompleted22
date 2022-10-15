@@ -244,12 +244,13 @@ public class DataAccess  {
 				q6=ev17.addQuestion("Will there be goals in the first half?",2);
 				
 			}			
-			else {
-				q1=ev1.addQuestion("Zeinek irabaziko du partidua?",1);
+			else { 
+				String question = "Zeinek irabaziko du partidua?";
+				q1=ev1.addQuestion(question,1);
 				q2=ev1.addQuestion("Zeinek sartuko du lehenengo gola?",2);
-				q3=ev11.addQuestion("Zeinek irabaziko du partidua?",1);
+				q3=ev11.addQuestion(question,1);
 				q4=ev11.addQuestion("Zenbat gol sartuko dira?",2);
-				q5=ev17.addQuestion("Zeinek irabaziko du partidua?",1);
+				q5=ev17.addQuestion(question,1);
 				q6=ev17.addQuestion("Golak sartuko dira lehenengo zatian?",2);
 				
 				
@@ -1135,49 +1136,56 @@ public static void open(boolean initializeMode){
 		}
 	}
 	
+
 	public boolean gertaeraEzabatu(Event ev) {
 		Event event  = db.find(Event.class, ev); 
 		boolean resultB = true; 
 		List<Question> listQ = event.getQuestions(); 
-		
 		for(Question q : listQ) {
 			if(q.getResult() == null) {
 				resultB = false; 
 			}
 		}
+		
 		if(resultB == false) {
 			return false;
 		}else if(new Date().compareTo(event.getEventDate())<0) {
-			TypedQuery<Quote> Qquery = db.createQuery("SELECT q FROM Quote q WHERE q.getQuestion().getEvent().getEventNumber() =?1", Quote.class);
-			Qquery.setParameter(1, event.getEventNumber()); 
-			List<Quote> listQUO = Qquery.getResultList();
-			for(int j=0; j<listQUO.size(); j++) {
-				Quote quo = db.find(Quote.class, listQUO.get(j));
-				for(int i=0; i<quo.getApustuak().size(); i++) {
-					ApustuAnitza apustuAnitza = quo.getApustuak().get(i).getApustuAnitza();
-					ApustuAnitza ap1 = db.find(ApustuAnitza.class, apustuAnitza.getApustuAnitzaNumber());
-					db.getTransaction().begin();
-					ap1.removeApustua(quo.getApustuak().get(i));
-					db.getTransaction().commit();
-					if(ap1.getApustuak().isEmpty() && !ap1.getEgoera().equals("galduta")) {
-						this.apustuaEzabatu(ap1.getUser(), ap1);
-					}else if(!ap1.getApustuak().isEmpty() && ap1.irabazitaMarkatu()){
-						this.ApustuaIrabazi(ap1);
-					}
-					db.getTransaction().begin();
-					Sport spo =quo.getQuestion().getEvent().getSport();
-					spo.setApustuKantitatea(spo.getApustuKantitatea()-1);
-					KirolEstatistikak ke=ap1.getUser().kirolEstatistikakLortu(spo);
-					ke.setKont(ke.getKont()-1);
-					db.getTransaction().commit();
-				}
-			}
+			
+			ezabatzekoAldaketak(event);
 			
 		}
 		db.getTransaction().begin();
 		db.remove(event);
 		db.getTransaction().commit();
 		return true; 
+	}
+
+	public void ezabatzekoAldaketak(Event event) {
+		TypedQuery<Quote> Qquery = db.createQuery("SELECT q FROM Quote q WHERE q.getQuestion().getEvent().getEventNumber() =?1", Quote.class);
+		Qquery.setParameter(1, event.getEventNumber()); 
+		List<Quote> listQUO = Qquery.getResultList();
+		for(int j=0; j<listQUO.size(); j++) {
+			
+			Quote quo = db.find(Quote.class, listQUO.get(j));
+			for(int i=0; i<quo.getApustuak().size(); i++) {
+				ApustuAnitza apustuAnitza = quo.getApustuak().get(i).getApustuAnitza();
+				ApustuAnitza ap1 = db.find(ApustuAnitza.class, apustuAnitza.getApustuAnitzaNumber());
+				db.getTransaction().begin();
+				ap1.removeApustua(quo.getApustuak().get(i));
+				db.getTransaction().commit();
+				if(ap1.getApustuak().isEmpty() && !ap1.getEgoera().equals("galduta")) {
+					this.apustuaEzabatu(ap1.getUser(), ap1);
+				}else if(!ap1.getApustuak().isEmpty() && ap1.irabazitaMarkatu()){
+					this.ApustuaIrabazi(ap1);
+				}
+				db.getTransaction().begin();
+				Sport spo =quo.getQuestion().getEvent().getSport();
+				spo.setApustuKantitatea(spo.getApustuKantitatea()-1);
+				KirolEstatistikak ke=ap1.getUser().kirolEstatistikakLortu(spo);
+				ke.setKont(ke.getKont()-1);
+				db.getTransaction().commit();
+			}
+		}
 	}
 	
 	public String saldoaBistaratu(User u) {
