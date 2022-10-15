@@ -13,6 +13,7 @@ import configuration.ConfigXML;
 import dataAccess.DataAccess;
 import domain.ApustuAnitza;
 import domain.Apustua;
+import domain.Bidaltzekoa;
 import domain.Elkarrizketa;
 import domain.ElkarrizketaContainer;
 import domain.Event;
@@ -272,9 +273,9 @@ public class BLFacadeImplementation  implements BLFacade {
     }
 	
 	@WebMethod
-	public boolean mezuaBidali(User igorle, String hartzailea, String titulo, String test, Elkarrizketa m) {
+	public boolean mezuaBidali(User igorle, String hartzailea, Bidaltzekoa bidaltzekoak, Elkarrizketa m) {
 		dbManager.open(false);
-		Boolean ema = dbManager.mezuaBidali(igorle, hartzailea, titulo, test, m);
+		Boolean ema = dbManager.mezuaBidali(igorle, hartzailea, bidaltzekoak, m);
 		dbManager.close();
 		return ema;
 	}

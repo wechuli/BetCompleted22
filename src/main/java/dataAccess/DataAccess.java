@@ -23,6 +23,7 @@ import configuration.UtilDate;
 import domain.Admin;
 import domain.ApustuAnitza;
 import domain.Apustua;
+import domain.Bidaltzekoa;
 import domain.Elkarrizketa;
 import domain.ElkarrizketaContainer;
 import domain.Event;
@@ -1215,7 +1216,7 @@ public static void open(boolean initializeMode){
 		return lista;
 	}
 	
-	public boolean mezuaBidali(User igorlea, String hartzailea, String titulo, String test, Elkarrizketa elkarrizketa) {
+	public boolean mezuaBidali(User igorlea, String hartzailea, Bidaltzekoa bidaltzekoak, Elkarrizketa elkarrizketa) {
 		User igorle = db.find(User.class, igorlea.getUsername());
 		User hartzaile = db.find(User.class, hartzailea);
 		Elkarrizketa elk=null;
@@ -1223,12 +1224,12 @@ public static void open(boolean initializeMode){
 			return false;
 		}else {
 			db.getTransaction().begin();
-			Message m = new Message(igorle, hartzaile, test);
+			Message m = new Message(igorle, hartzaile, bidaltzekoak.getTestua());
 			db.persist(m);
 			if(elkarrizketa!=null) {
 				elk = db.find(Elkarrizketa.class, elkarrizketa.getElkarrizketaNumber());
 			}else {
-				elk= new Elkarrizketa(titulo, igorle, hartzaile);
+				elk= new Elkarrizketa(bidaltzekoak.getIzenburua(), igorle, hartzaile);
 				db.persist(elk);
 				m.setElkarrizketa(elk);
 				igorle.addElkarrizketak(elk);
@@ -1395,4 +1396,5 @@ public static void open(boolean initializeMode){
 		return query.getResultList();
 		
 	}
+	
 }

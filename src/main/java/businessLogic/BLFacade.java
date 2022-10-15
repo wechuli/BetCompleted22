@@ -10,6 +10,7 @@ import javax.jws.WebService;
 
 import domain.ApustuAnitza;
 import domain.Apustua;
+import domain.Bidaltzekoa;
 import domain.Elkarrizketa;
 import domain.ElkarrizketaContainer;
 import domain.Event;
@@ -109,7 +110,7 @@ public interface BLFacade  {
 	
 	@WebMethod public List<ElkarrizketaContainer> elkarrizketakLortu(User u);
 	
-	@WebMethod public boolean mezuaBidali(User igorle, String hartzailea, String asunto, String test, Elkarrizketa m);
+	@WebMethod public boolean mezuaBidali(User igorle, String hartzailea, Bidaltzekoa bidaltzekoak, Elkarrizketa m);
 	
 	@WebMethod public List<Registered> rankingLortu();
 	
