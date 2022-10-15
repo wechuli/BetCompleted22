@@ -20,11 +20,10 @@ public class MezuakRenderer extends JLabel implements ListCellRenderer<MezuakCon
 		  user=u;
 	    }
 	 
-	    @Override
 	    public Component getListCellRendererComponent(JList<? extends MezuakContainer> list, MezuakContainer mezua, int index,
-	            boolean isSelected, boolean cellHasFocus) {
-	 
-	    	setText(mezua.toString());
+	    		SelectedOrFocus SelectedOrFocus) {
+	   
+	    	setText(mezua.toString()); 
 	    	String code = "m1"; 
 	    	
 	    	 ImageIcon imageIcon = new ImageIcon(".\\src/main/resources\\data\\"+mezua.getMessage().isIrakurrita()+".png"); // load the image to a imageIcon
@@ -33,7 +32,7 @@ public class MezuakRenderer extends JLabel implements ListCellRenderer<MezuakCon
 		     imageIcon = new ImageIcon(newimg);
 	         setIcon(imageIcon);
 	         
-	           	 if (mezua.getMessage().isIrakurrita() == false && !isSelected) {
+	           	 if (mezua.getMessage().isIrakurrita() == false && !SelectedOrFocus.isSelected) {
 	 	             setBackground(list.getSelectionBackground().PINK);
 	 	           	 setForeground(list.getSelectionForeground().BLACK);
 	 	            
@@ -42,7 +41,7 @@ public class MezuakRenderer extends JLabel implements ListCellRenderer<MezuakCon
 	 	        		setBackground(list.getBackground());
 	 		            setForeground(list.getForeground());
 	 	        	}
-	 	        	 if(isSelected) {
+	 	        	 if(SelectedOrFocus.isSelected) {
 	 	        		setBackground(list.getSelectionBackground().gray);
 	 		            setForeground(list.getSelectionForeground().white);
 	 	        	}
@@ -50,5 +49,12 @@ public class MezuakRenderer extends JLabel implements ListCellRenderer<MezuakCon
 	 	        }
 	        return this;
 	    }
+
+		@Override
+		public Component getListCellRendererComponent(JList<? extends MezuakContainer> list, MezuakContainer value,
+				int index, boolean isSelected, boolean cellHasFocus) {
+			// TODO Auto-generated method stub
+			return null;
+		}
 	    
 }
