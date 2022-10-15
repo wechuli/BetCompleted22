@@ -14,6 +14,7 @@ import javax.swing.JTextField;
 import javax.swing.SwingConstants;
 
 import businessLogic.BLFacade;
+import domain.Bidaltzekoa;
 import domain.Elkarrizketa;
 import domain.Message;
 import domain.User;
@@ -112,7 +113,8 @@ public class MezuakBidaliGUI extends JFrame{
 		btnEnviar.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				if(!user.getUsername().equals(txtHartzailea.getText())) {
-					Boolean ema= businessLogic.mezuaBidali(user, txtHartzailea.getText(), txtAsunto.getText(), txtTestua.getText(), elkarrizketa);
+					Bidaltzekoa bidali = new Bidaltzekoa(txtAsunto.getText(), txtTestua.getText());
+					Boolean ema= businessLogic.mezuaBidali(user, txtHartzailea.getText(), bidali, elkarrizketa);
 					if(ema) {
 						thisw.setVisible(false);
 						JFrame a = new SarreraOntziaGUI(user);
