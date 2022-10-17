@@ -1018,12 +1018,12 @@ public static void open(boolean initializeMode){
 
 	public Boolean apustuAnitzakKonprobatu(Boolean b, ApustuAnitza apustuAnitza, Jarraitzailea erab) {
 		for(ApustuAnitza apu: erab.getNork().getApustuAnitzak()) {
-			if(apu.getApustuKopia()==apustuAnitza.getApustuKopia()) {
+			if(apu.getApustuKopia().equals( apustuAnitza.getApustuKopia())) {
 				b=false;
 			}
 		}
 		return b;
-	}
+	} 
 
 	public void apusutakLortu(Registered user, ApustuAnitza apustuAnitza) {
 		for(Apustua a: apustuAnitza.getApustuak()) {
